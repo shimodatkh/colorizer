@@ -1,5 +1,10 @@
 #!/bin/sed -f
 
+#### My Coloring #############
+s@:\(500\),@:{{yellow}}\1{{reset}},@
+s@:\(200\),@:{{green}}\1{{reset}},@
+s@:\(304\),@:{{green}}\1{{reset}},@
+
 # http status code
 s/\(HTTP\/1..\"\) \(2[0-9][0-9]\) /\1 {{blue}}\2{{reset}} /
 s/\(HTTP\/1..\"\) \(3[0-9][0-9]\) /\1 {{green}}\2{{reset}} /
